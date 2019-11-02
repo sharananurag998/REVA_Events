@@ -25,3 +25,8 @@ def login2():
             form.username.data, form.remember_me.data))
         return redirect('/index')
     return render_template('login2.html', title='Sign In', form=form)
+
+@app.route('/certificates')
+def certificates():
+	return render_template('certificates.html')
+
