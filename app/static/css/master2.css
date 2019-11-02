@@ -23,9 +23,9 @@ width: auto;
       max-width: 500px;
       margin: auto;
     }
-    .btn1:hover{
+    /* .btn1:hover{
         background-color: ;
-    }
+    } */
     .btn1{
         background-color: #EE4633;
                 }
@@ -46,3 +46,15 @@ width: auto;
        margin-left: 50% ;
    }
 
+   hr{
+       color: #EE4633;
+       width: 10px;
+   }
+
+   #reg_container{
+       margin-top: 5%;
+   }
+
+.page_title{
+    size: 15%;
+}
