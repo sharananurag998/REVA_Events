@@ -144,5 +144,14 @@ width: auto;
     z-index: 1;
   } */
 
+  /*For The QR Code Reader*/
+  .qrcode-text {padding-right:1.7em; margin-right:0}
+.qrcode-text-btn {display:inline-block; background:url(//dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg) 50% 50% no-repeat; height:1em; width:1.7em; margin-left:-1.7em; cursor:pointer}
+.qrcode-text-btn > input[type=file] {position:absolute; overflow:hidden; width:1px; height:1px; opacity:0}
+
+.art1 {
+  margin-top: 60px;
+}
+
 
 

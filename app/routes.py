@@ -44,3 +44,7 @@ def login2():
 def certificates():
 	return render_template('certificates.html')
 
+@app.route('/qrread')
+def qr():
+	return render_template('qrreader.html')
+
