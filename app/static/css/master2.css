@@ -53,10 +53,9 @@ width: auto;
 
    #reg_container{
        margin-top: 10%;
-       max-width: 530px;
+       max-width: 500px;
        padding: 15px;
        margin: 0 auto;
        border-radius: 0.3em;
        background-color: #f2f2f2;
    }
-}
