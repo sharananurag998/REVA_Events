@@ -17,6 +17,20 @@ def registrations():
 def login():
 	return render_template('login.html')
 
+@app.route('/Event')
+def calander():
+    events = [
+        {
+            'event': 'Hackathon 2019',
+            'venue': 'REVA Rangasthala'
+        },
+        {
+            'event': 'Under 25',
+            'venue': 'Kuvempu Theatre'
+        }
+    ] 
+    return render_template('Event_Calandar1.html', events = events)
+
 @app.route('/login2', methods=['GET', 'POST'])
 def login2():
     form = LoginForm()
