@@ -22,3 +22,26 @@ body{
     margin-top: 100px;
 }
 
+    .container {
+      max-width: 500px;
+      margin: auto;
+    }
+    .btn1:hover{
+        background-color: ;
+    }
+    .btn1{
+        background-color: #EE4633;
+                }
+    .ada2{
+        margin: auto;
+       display: block;
+    }
+    .clr {
+    background: linear-gradient(100deg, #CCFFFF,#FFCCCC);
+   }
+
+   /* .ax1 {
+       margin: auto;
+       display: block;
+   } */
+
