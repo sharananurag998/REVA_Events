@@ -37,8 +37,12 @@ width: auto;
     background: linear-gradient(100deg, #CCFFFF,#FFCCCC);
    }
 
-   /* .ax1 {
-       margin: auto;
-       display: block;
-   } */
+   .ax1 {
+       margin-left: 185px;
+       margin-top: 15px;
+   }
+
+   .abc1 {
+       margin-left: 30% ;
+   }
 
