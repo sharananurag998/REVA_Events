@@ -7,6 +7,11 @@ width: auto;
     width: auto;
     
 }*/
+body {
+    background: linear-gradient(100deg,  #CCFFFF #FFCCCC) ;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 100px;
+}
 #btn1{
    margin-top: 50px;
 }
@@ -17,10 +22,7 @@ width: auto;
     vertical-align: middle;
 }
 
-body{
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 100px;
-}
+
 
     .container {
       max-width: 500px;
