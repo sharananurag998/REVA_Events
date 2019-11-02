@@ -64,3 +64,12 @@ width: auto;
    .dropdown {
        position: relative;
    }
+
+   .carousel-box{
+       width: auto;
+       height: 40%;
+   }
+   #carousel-img{
+        height: 90%;
+        width: auto;
+   }
