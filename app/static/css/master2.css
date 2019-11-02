@@ -123,3 +123,26 @@ width: auto;
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  .hamburger-icon{
+    width: 10%;
+    height: auto;
+    
+  }
+
+  .abcd123 {
+    margin: left;
+    text-align: left;
+    margin-left: 0px;
+  }
+
+  .xyz12 {
+    margin-left: 0px;
+  }
+
+  /* .x1 {
+    z-index: 1;
+  } */
+
+
+
