@@ -5,7 +5,10 @@
       {% else %}
       <title>Welcome to REVA Events</title>
       {% endif %}
-      
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.05">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
       <link rel="stylesheet" href="{{ url_for('static', filename='css/abc.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='css/Event_Calandar1.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='css/master2.css') }}">
@@ -48,7 +51,7 @@
         <!-- <div>REVA Events: <a href="/index">Home</a></div>
         <div>REVA Events: <a href="/registrations">Registrations</a></div>
         <div>REVA Events: <a href="/login">Login</a></div> -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
