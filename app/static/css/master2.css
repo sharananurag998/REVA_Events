@@ -7,11 +7,6 @@ width: auto;
     width: auto;
     
 }*/
-body {
-    background: linear-gradient(100deg,  #CCFFFF #FFCCCC) ;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 100px;
-}
 #btn1{
    margin-top: 50px;
 }
@@ -28,9 +23,9 @@ body {
       max-width: 500px;
       margin: auto;
     }
-    .btn1:hover{
+    /* .btn1:hover{
         background-color: ;
-    }
+    } */
     .btn1{
         background-color: #EE4633;
                 }
@@ -42,8 +37,26 @@ body {
     background: linear-gradient(100deg, #CCFFFF,#FFCCCC);
    }
 
-   /* .ax1 {
-       margin: auto;
-       display: block;
-   } */
+   .ax1 {
+       margin-left: 50px;
+       margin-top: 60px;
+   }
 
+   .abc1 {
+       margin-left: 30% ;
+   }
+
+   hr{
+       color: #EE4633;
+       width: 10px;
+   }
+
+   #reg_container{
+       margin-top: 10%;
+       max-width: 530px;
+       padding: 15px;
+       margin: 0 auto;
+       border-radius: 0.3em;
+       background-color: #f2f2f2;
+   }
+}
