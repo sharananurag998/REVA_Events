@@ -6,3 +6,7 @@ from flask import render_template
 def index():
 	user = {'username': 'Anurag'}
 	return render_template('index.html', title='Home', user=user)
+
+@app.route('/registrations')
+def registrations():
+	return render_template('registration.html')

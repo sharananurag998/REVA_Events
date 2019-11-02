@@ -1,7 +1,3 @@
-body {
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCUJrXCcp-ZoSl2d1W_kqtDWFdNItNQoZRxeHsHCBwvJ7OVppSJw&s') fixed;
-   background-size: cover;
-}
 
 *[role="form"] {
    max-width: 530px;
