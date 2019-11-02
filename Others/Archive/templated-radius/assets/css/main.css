@@ -29,6 +29,18 @@
 	ol, ul {
 		list-style: none;
 	}
+	#abc
+	{
+		background-color: #832121;
+		color: #fff;
+		/* font-size: 24px;
+		font-weight: 500;
+		border-radius: 18px;
+		margin: 75px;
+		width: 226px;
+		height:55px; */
+
+	}
 
 	blockquote, q {
 		quotes: none;
