@@ -1,15 +1,16 @@
 .row.heading h2 {
     color: #fff;
-    font-size: 52.52px;
+    font-size: 30px;
     line-height: 95px;
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
-    margin: 0 0 40px;
-    padding-bottom: 20px;
+    margin: 0 0 10px;
+    padding-bottom: 10px;
     text-transform: uppercase;
 }
 body{
-    background: linear-gradient(100deg,#ccffff,#ffcccc)
+    background: linear-gradient(100deg,#ccffff,#ffcccc);
+    top right no-repeat; background-attachment:fixed; 
 }
 ul{
   margin:0;
