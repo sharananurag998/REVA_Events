@@ -43,7 +43,7 @@ width: auto;
    }
 
    .abc1 {
-       margin-left: 50% ;
+       margin-left: 30% ;
    }
 
    hr{
@@ -54,7 +54,4 @@ width: auto;
    #reg_container{
        margin-top: 5%;
    }
-
-.page_title{
-    size: 15%;
 }
