@@ -1,8 +1,15 @@
 <html>
     <head>
-        <title>{{ title }} - REVA Events</title>
+      {% if title %}
+      <title>{{ title }} - REVA Events</title>
+      {% else %}
+      <title>Welcome to REVA Events</title>
+      {% endif %}
     </head>
     <body>
-        <h1>Hello, {{ user.username }}!</h1>
+        <div>REVA Events: <a href="/index">Home</a></div>
+        <div>REVA Events: <a href="/registration.html">Registration</a></div>
+        <hr>
+        {% block content %}{% endblock %}
     </body>
 </html>
