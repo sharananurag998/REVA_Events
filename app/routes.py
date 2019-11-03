@@ -89,3 +89,7 @@ def logout():
 @app.route('/payment-gateway')
 def gateway():
     return render_template('gateway.html')
+
+@app.route('/reset')
+def reset():
+    return render_template('reset.html')
