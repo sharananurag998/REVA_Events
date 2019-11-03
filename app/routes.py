@@ -94,7 +94,7 @@ def gateway():
 def reset():
     return render_template('reset.html')
 
-@app.route('/add-event')
+@app.route('/add-event', methods=['GET', 'POST'])
 def add():
     form2 = AddEventForm()
     return render_template('add_event.html', form=form2)
