@@ -85,3 +85,7 @@ def ev():
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+@app.route('/payment-gateway')
+def gateway():
+    return render_template('gateway.html')
