@@ -33,3 +33,10 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+
+/*For the Profile Icon*/
+
+function openWindow() 
+{
+  window.open("https://www.google.com");
+}
