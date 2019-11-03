@@ -22,10 +22,6 @@ def registrations():
     user_name = request.args.get('name')
     return render_template('registration.html',user=user_name)
 
-# @app.route('/login')
-# def login():
-# 	return render_template('login.html')
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -48,15 +44,6 @@ def login():
 def calander():
     events = Event.query.all()
     return render_template('Event_Calandar1.html', events = events)
-
-# @app.route('/login2', methods=['GET', 'POST'])
-# def login2():
-#     form = LoginForm()
-#     if form.validate_on_submit():
-#         flash('Login requested for user {}, remember_me={}'.format(
-#             form.username.data, form.remember_me.data))
-#         return redirect('/index')
-#     return render_template('login2.html', title='Sign In', form=form)
 
 @app.route('/certificates')
 @login_required
