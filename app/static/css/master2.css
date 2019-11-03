@@ -184,5 +184,16 @@ width: auto;
   margin-top : 50px ;
 }
 
+.xy {
+  margin-left: 83%;
+  margin-top:90%;
+}
+
+#acr12 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
 
 
