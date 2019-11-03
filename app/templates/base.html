@@ -91,14 +91,28 @@
         <nav class="navbar  navbar-light bg-light navbar-fixed-top x1">
             <span onclick="openNav()"><span class="glyphicon glyphicon-menu-hamburger abcd123" aria-hidden="true"></span><!--<img src="https://www.aweirdshop.com/public/assets/img/menu-icon.png" alt="open" class="hamburger-icon">-->
             </span>
+            
             <a class="navbar-brand xyz12" href="/index">REVA Events</a>
+            <span onclick="openWindow()"><span class="glyphicon glyphicon-user abcd1234" aria-hidden="true"></span>
+            </span>
             <span id="mySidenav" class="sidenav">
 
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                {% if current_user.is_anonymous %}
+                <h3>REVA Events</h3>
+                {% else %}
+                <h3>Hey! {{current_user.username}}</h3>
+                {% endif %}        
                 <a href="/index">Home</a>
                 <a href="/registrations">Registrations</a>
-                <a href="/login">Login</a>
+                <!-- <a href="/login">Login</a> -->
                 <a href="/certificates">My Certificates</a>
+                {% if current_user.is_anonymous %}
+                <a href="{{ url_for('login') }}">Login</a>
+                {% else %}
+                <a href="{{ url_for('logout') }}">Logout</a>
+                {% endif %}
+        
             </span>
     
                 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
