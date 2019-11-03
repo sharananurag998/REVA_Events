@@ -1,8 +1,9 @@
 from app import app
+from app import db
 from app.forms import LoginForm, AddEventForm
 from flask import render_template, flash, redirect, url_for
 from flask_login import current_user, login_user
-from app.models import User
+from app.models import User, Event
 from flask_login import logout_user
 from flask import request
 from flask_login import login_required
@@ -97,4 +98,12 @@ def reset():
 @app.route('/add-event', methods=['GET', 'POST'])
 def add():
     form2 = AddEventForm()
+
+    if form2.validate_on_submit():
+        event = Event(name=form2.event_name.data, body=form2.body.data,venue=form2.venue.data,branch=form2.branch.data,image=form2.image.data,timestamp=form2.timestamp.data)
+        db.session.add(event)
+        db.session.commit()
+        flash('Congratulations, new event registered successfully!')
+        return redirect('/Event')
+
     return render_template('add_event.html', form=form2)
