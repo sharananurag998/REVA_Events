@@ -2,67 +2,23 @@
 
 {% block content %}
     <div class="container-fluid">
-    <div class="month">
-        <ul>
-          <li class="prev"><button id="abc"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></button></li>
-          <li class="next"><button id="abc"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button></li>
-          <li>November<br><span style="font-size:18px">2019</span><br><img class="image1" src=" {{ url_for('static', filename='images/TransparentRevaLogo.png') }}" alt="REVA Logo" width="50px" height="50px"></li>
-        </ul>
-      </div>
-      
-      <ul class="weekdays">
-        <li>Mo</li>
-        <li>Tu</li>
-        <li>We</li>
-        <li>Th</li>
-        <li>Fr</li>
-        <li>Sa</li>
-        <li>Su</li>
-      </ul>
-      
-      <ul class="days">
-        <li>1</li>
-        <li><span class="active">2</span></li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-        <li>8</li>
-        <li>9</li>
-        <li>10</li>
-        <li>11</li>
-        <li>12</li>
-        <li>13</li>
-        <li>14</li>
-        <li>15</li>
-        <li>16</li>
-        <li>17</li>
-        <li>18</li>
-        <li>19</li>
-        <li>20</li>
-        <li>21</li>
-        <li>22</li>
-        <li>23</li>
-        <li>24</li>
-        <li>25</li>
-        <li>26</li>
-        <li>27</li>
-        <li>28</li>
-        <li>29</li>
-        <li>30</li>
-    </ul>
-    </div>
-    <br>
-
     <div>
-        <h3 id="label1" class="container"><u>Upcoming Events </u></h3><br>
+        <h2 style="margin-top: 30%;">Event Calendar </h2><br>
         {% for evn in events %}
         <ul>
+          <li><b><h5>{{evn.timestamp}}</h5></b></li>
           <li><h3><a href="/evn_det?name={{evn.name}}&venue={{evn.venue}}&body={{evn.body}}&timestamp={{evn.timestamp}}">{{evn.name}}</a></h3>
             <br>
             {{evn.venue}}</a> </li>
         </ul>
+
+        <br>
+        <hr style="   
+        width: 100%;
+        border-style: solid;
+        border-color: black;
+    ">
+        <br>
         {% endfor %}
     </div>
     {% endblock %}

@@ -13,8 +13,9 @@ from werkzeug.urls import url_parse
 @app.route('/')
 @app.route('/index')
 def index():
-	user = {'username': 'Anurag'}
-	return render_template('index.html', title='Home', user=user)
+    events = Event.query.all()
+    first_event = Event.query.filter_by(id=1)
+    return render_template('index.html', title='Home',events=events, first=first_event)
 
 @app.route('/registrations')
 @login_required
@@ -131,3 +132,7 @@ def profile():
 def MyEve():
     events = Event.query.all()
     return render_template('MyEvents.html', events=events)
+
+@app.route('/google_calendar')
+def google_cal():
+    return render_template('calendar.html')
