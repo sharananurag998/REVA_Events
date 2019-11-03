@@ -38,5 +38,5 @@ function closeNav() {
 
 function openWindow() 
 {
-  window.open("https://www.google.com");
+  window.open("https://static.superbot.works/widget.html?a=d6lxGMgGeE&l=en");
 }
