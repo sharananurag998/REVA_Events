@@ -13,7 +13,7 @@ class User(UserMixin, db.Model):
     password_hash = db.Column(db.String(128))
     about_me = db.Column(db.String(140))
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
-    is_admin = db.Column(db.Boolean, unique=False, default=False)
+    is_admin = db.Column(db.Boolean, unique=False, default=0)
 
 
 
@@ -34,7 +34,9 @@ class User(UserMixin, db.Model):
 
 class Event(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(120))
     body = db.Column(db.String(140))
+    venue = db.Column(db.String(140))
     branch = db.Column(db.String(140))
     image = db.Column(db.String(140))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
