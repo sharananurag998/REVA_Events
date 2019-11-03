@@ -138,10 +138,11 @@ width: auto;
 
   .xyz12 {
     margin-left: 0px;
+    margin-top: 0px;
   }
 
   /* .x1 {
-    z-index: 1;
+    padding-top: 0px;
   } */
 
   /*For The QR Code Reader*/
@@ -195,5 +196,38 @@ width: auto;
   height: 50px;
 }
 
+.reval{
+  margin: auto;
+  animation-name:abcx;
+  margin-right: 40%;
+  margin-top: 10%;
+  animation-duration: 4s;
+        animation-iteration-count: infinite;
+}
+
+@keyframes abcx {
+  0% {
+      transform:rotate(0deg);
+      
+  }
+  25% {
+      transform:rotate(90deg);
+      /* width: 200px;
+      height: 200px; */
+  }
+  50% {
+      transform:rotate(180deg);
+      /* width: 100px;
+      height: 100px; */
+  }
+  75% {
+      transform:rotate(270deg);
+      /* width: 200px;
+      height: 200px; */
+  }
+  100% {
+      transform:rotate(360deg);
+  }
+}
 
 
