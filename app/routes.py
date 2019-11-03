@@ -6,6 +6,7 @@ from app.models import User
 from flask_login import logout_user
 from flask import request
 from flask_login import login_required
+from werkzeug.urls import url_parse
 
 
 @app.route('/')
