@@ -39,7 +39,7 @@ class Event(db.Model):
     venue = db.Column(db.String(140))
     branch = db.Column(db.String(140))
     image = db.Column(db.String(140))
-    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    timestamp = db.Column(db.Date, index=True, default=datetime.utcnow)
 
     def __repr__(self):
         return '<Event {}>'.format(self.body)

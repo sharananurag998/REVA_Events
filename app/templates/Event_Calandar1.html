@@ -59,7 +59,7 @@
         <h3 id="label1" class="container"><u>Upcoming Events </u></h3><br>
         {% for evn in events %}
         <ul>
-          <li><h3><a href="/evn_det?name={{evn.name}}&venue={{evn.venue}}&body={{evn.body}}">{{evn.name}}</a></h3>
+          <li><h3><a href="/evn_det?name={{evn.name}}&venue={{evn.venue}}&body={{evn.body}}&timestamp={{evn.timestamp}}">{{evn.name}}</a></h3>
             <br>
             {{evn.venue}}</a> </li>
         </ul>

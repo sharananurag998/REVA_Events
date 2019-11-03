@@ -1,5 +1,6 @@
 .a1 {   opacity: 0.9;        border-bottom-left-radius: 30px; 
     border-bottom-right-radius: 30px; 
+    border-radius: 25%;
 } 
 .card-title {
    margin-left: auto;

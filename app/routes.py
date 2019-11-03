@@ -73,7 +73,8 @@ def ev():
     evn_name = request.args.get('name')
     evn_venue = request.args.get('venue')
     evn_body = request.args.get('body')
-    return render_template('event details.html',event_name = evn_name,venue_name = evn_venue,body_event= evn_body)
+    evn_date = request.args.get('timestamp')
+    return render_template('event details.html',event_name = evn_name,venue_name = evn_venue,body_event= evn_body,date_evn=evn_date)
 
 @app.route('/logout')
 def logout():
