@@ -55,6 +55,11 @@ def certificates():
 def qr():
 	return render_template('qrreader.html')
 
+@app.route('/qrgen')
+@login_required
+def qrg():
+	return render_template('qrgenerator.html')
+
 @app.route('/evn_det')
 def ev():
     evn_name = request.args.get('name')
