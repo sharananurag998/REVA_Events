@@ -1,0 +1,137 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<link rel="stylesheet" href="profile.css">
+<script src="profile.js"></script>
+
+
+<link rel="stylesheet" href="https://bootswatch.com/4/simplex/bootstrap.min.css"/>
+    <title>My Profile</title>
+</head>
+<body> -->
+{% extends "base.html" %}
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="aaa">
+                <h1>My Profile</h1>
+            </div>
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="card-title mb-4">
+                            <div class="d-flex justify-content-start">
+                                   
+                                <div class="image-container">
+                                        
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNglNDlOlAIwJeQclsHAD6cygnbyFKW98kIgMaRxA9ZbY-9ask&s" id="imgProfile" style="width: 150px; height: 150px" class="img-thumbnail" />
+                                    <div class="middle">
+                                        <input type="button" class="btn btn-secondary" id="btnChangePicture" value="Change" />
+                                        <input type="file" style="display: none;" id="profilePicture" name="file" />
+                                    </div>
+                                </div>
+                                <div class="userData ml-3">
+                                    <h2 id="name1" class="d-block" style="font-size: 1.5rem; "><a href="javascript:void(0);">Ankit K Jaiswal</a></h2>
+                                    <h6 class="d-block"><a href="javascript:void(0)">14</a> Events Attended</h6>
+                                    <h6 class="d-block"><a href="https:/www.facebook.com">Certificates</a></h6>
+                                </div>
+                                <div class="ml-auto">
+                                    <input type="button" class="btn btn-primary d-none" id="btnDiscard" value="Discard Changes" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="true">Basic Info</a>
+                                    </li>
+                                    
+                                </ul>
+
+
+                                <div class="tab-content ml-1" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
+                                        
+
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold; ">Full Name</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                Ankit Kumar Jaiswal
+                                            </div>
+                                        </div>
+                                        <hr />
+
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Birth Date</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                March 22, 1998.
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        
+                                        
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Events Attended</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                234
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Events Bookmarked</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                23
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Certificates</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                
+    
+                                            </div>
+                                        </div>
+                                        <hr />
+
+                                    </div>
+                                    <button type="button" class="btn btn-primary btn1">Edit Profile</button>
+
+
+
+
+
+
+
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+{% endblock %}
