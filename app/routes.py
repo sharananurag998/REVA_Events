@@ -1,5 +1,5 @@
 from app import app
-from app.forms import LoginForm
+from app.forms import LoginForm, AddEventForm
 from flask import render_template, flash, redirect, url_for
 from flask_login import current_user, login_user
 from app.models import User
@@ -93,3 +93,8 @@ def gateway():
 @app.route('/reset')
 def reset():
     return render_template('reset.html')
+
+@app.route('/add-event')
+def add():
+    form2 = AddEventForm()
+    return render_template('add_event.html', form=form2)
