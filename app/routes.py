@@ -5,6 +5,7 @@ from flask_login import current_user, login_user
 from app.models import User
 from flask_login import logout_user
 from flask import request
+from flask_login import login_required
 
 
 @app.route('/')
@@ -14,6 +15,7 @@ def index():
 	return render_template('index.html', title='Home', user=user)
 
 @app.route('/registrations')
+@login_required
 def registrations():
 	return render_template('registration.html')
 
@@ -60,10 +62,12 @@ def calander():
 #     return render_template('login2.html', title='Sign In', form=form)
 
 @app.route('/certificates')
+@login_required
 def certificates():
 	return render_template('certificates.html')
 
 @app.route('/qrread')
+@login_required
 def qr():
 	return render_template('qrreader.html')
 
