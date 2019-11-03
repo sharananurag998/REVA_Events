@@ -71,7 +71,9 @@ def qr():
 @app.route('/evn_det')
 def ev():
     evn_name = request.args.get('name')
-    return render_template('event details.html',event_name = evn_name)
+    evn_venue = request.args.get('venue')
+    evn_body = request.args.get('body')
+    return render_template('event details.html',event_name = evn_name,venue_name = evn_venue,body_event= evn_body)
 
 @app.route('/logout')
 def logout():
