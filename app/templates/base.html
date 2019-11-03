@@ -98,6 +98,11 @@
             <span id="mySidenav" class="sidenav">
 
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                {% if current_user.is_anonymous %}
+                <h3>REVA Events</h3>
+                {% else %}
+                <h3>Hey! {{current_user.username}}</h3>
+                {% endif %}        
                 <a href="/index">Home</a>
                 <a href="/registrations">Registrations</a>
                 <!-- <a href="/login">Login</a> -->
