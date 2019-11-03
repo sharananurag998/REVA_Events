@@ -86,29 +86,23 @@ def profile():
     return render_template('profile.html')
 
 
-@app.route('/Calendar')
-def profile():
-    return render_template('calendar.html')
-
-@app.route('/MyEvents')
-def MyEve():
-    myEventObj = [
-        {
-            name:'HackFest 2019',
-            body:'A 24 Hour Hackathon conducted by REVA University',
-            venue: 'REVA Rangasthala',
-            date: 'November 2nd',
-            image: 'https://hilnethcorreia.com.br/wp-content/uploads/2019/07/hackfest.jpg',
-            branch: 'CSE'
-        }, 
-        {
-            name:'Under 25 REVA',
-            body:'Under 25 is a go to platform to inspire millions of students for the discovery of career opportunities and giving them a true industrial experience. This event is open to students from all colleges.',
-            venue: 'REVA Saugandhika',
-            date: 'November 8th',
-            image: 'https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto,w_800/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1570515071%2Frcjdbaknmyp8h4red5vc.jpg',
-            branch: 'Humanities'
-        }
+#     myEventObj[
+#         {
+#             name:'HackFest 2019',
+#             body:'A 24 Hour Hackathon conducted by REVA University',
+#             venue: 'REVA Rangasthala',
+#             date: 'November 2nd',
+#             image: 'https://hilnethcorreia.com.br/wp-content/uploads/2019/07/hackfest.jpg',
+#             branch: 'CSE'
+#         }, 
+#         {
+#             name:'Under 25 REVA',
+#             body:'Under 25 is a go to platform to inspire millions of students for the discovery of career opportunities and giving them a true industrial experience. This event is open to students from all colleges.',
+#             venue: 'REVA Saugandhika',
+#             date: 'November 8th',
+#             image: 'https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto,w_800/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fc_crop%2Cg_custom%2Fv1570515071%2Frcjdbaknmyp8h4red5vc.jpg',
+#             branch: 'Humanities'
+#         }
         
         # {
         #     name:'HackFest 2019',
@@ -132,5 +126,8 @@ def MyEve():
         #     image: '',
         #     branch: ''
         # }
-    ]
-    return render_template('MyEvents.html', events=myEventObj)
+    # ]
+@app.route('/MyEvents')
+def MyEve():
+    events = Event.query.all()
+    return render_template('MyEvents.html', events=events)
