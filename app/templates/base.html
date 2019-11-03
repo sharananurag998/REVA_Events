@@ -128,19 +128,19 @@
                 {% endif %} -->
                 
                 {% if current_user.is_anonymous %}
-                <h3 class="hamb"></h3>>REVA Events</h3>
+                <h3 class="hamb" style="color: cornsilk; margin-left: 12%;">REVA Events</h3>
                 <a href="/index">Home</a>
                 <a href="/Event">Event Calendar</a>
                 <a href="/login">Login</a>
                 {% elif current_user.is_admin %}
-                <h3 class="hamb"></h3>>  Hello,  {{current_user.username}}</h3>
+                <h3 class="hamb" style="color: cornsilk; margin-left: 12%;">  Hello,  {{current_user.username}}</h3>
                 <a href="/index">Home</a>
                 <a href="/Event">Event Calendar</a>
                 <a href="#">Admin Tools</a>
                 <a href="/add-event">Add Event</a>
                 <a href="{{ url_for('logout') }}">Logout</a>
                 {% else %}
-                <h3 class="hamb">  Yo,  {{current_user.username}}</h3>
+                <h3 class="hamb" style="color: cornsilk; margin-left: 12%;">  Yo,  {{current_user.username}}</h3>
                 <a href="/index">Home</a>
                 <a href="/Event">Event Calendar</a>
                 <a href="/MyEvents">My Events</a>
