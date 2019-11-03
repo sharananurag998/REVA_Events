@@ -96,11 +96,11 @@
         <div>REVA Events: <a href="/login">Login</a></div> -->
         
         <nav class="navbar  navbar-light bg-light navbar-fixed-top x1">
-            <span onclick="openNav()"><span class="glyphicon glyphicon-menu-hamburger abcd123" aria-hidden="true"></span><!--<img src="https://www.aweirdshop.com/public/assets/img/menu-icon.png" alt="open" class="hamburger-icon">-->
+            <span onclick="openNav()"><span class="glyphicon glyphicon-menu-hamburger abcd123" aria-hidden="true"></span>
             </span>
             
             <a class="navbar-brand xyz12" href="/index">REVA Events</a>
-            <span onclick="openWindow()"><span class="glyphicon glyphicon-user abcd1234" aria-hidden="true"></span>
+            <span onclick="openWindow()">{% if current_user.is_anonymous %}<span class="glyphicon glyphicon-user abcd1234" aria-hidden="true"></span>{% else %}<span class="glyphicon glyphicon-qrcode abcd123" aria-hidden="true"></span>{% endif %}
             </span>
             
             <span id="mySidenav" class="sidenav">
