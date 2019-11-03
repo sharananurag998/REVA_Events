@@ -7,3 +7,9 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     remember_me = BooleanField('Remember Me')
     submit = SubmitField()
+
+class addEventForm(FlaskForm):
+    event_name = StringField('Event Name', validators=[DataRequired()])
+    about = StringField('About', validators=[DataRequired()])
+    venue = StringField('Venue', validators=[DataRequired()])
+    branch = StringField('Branch', StringField('About', validators=[DataRequired()]))
