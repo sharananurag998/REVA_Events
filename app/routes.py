@@ -87,13 +87,4 @@ def profile():
 
 @app.route('/MyEvents')
 def MyEve():
-    return render_template('MyEvents.html')
-
-    if form2.validate_on_submit():
-        event = Event(name=form2.event_name.data, body=form2.body.data,venue=form2.venue.data,branch=form2.branch.data,image=form2.image.data,timestamp=form2.timestamp.data)
-        db.session.add(event)
-        db.session.commit()
-        flash('Congratulations, new event registered successfully!')
-        return redirect('/Event')
-
-    return render_template('add_event.html', form=form2)
+    return render_template('MyEvents.html', events=Event.query.all())
