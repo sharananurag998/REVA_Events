@@ -97,8 +97,14 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="/index">Home</a>
                 <a href="/registrations">Registrations</a>
-                <a href="/login">Login</a>
+                <!-- <a href="/login">Login</a> -->
                 <a href="/certificates">My Certificates</a>
+                {% if current_user.is_anonymous %}
+                <a href="{{ url_for('login') }}">Login</a>
+                {% else %}
+                <a href="{{ url_for('logout') }}">Logout</a>
+                {% endif %}
+        
             </span>
     
                 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
