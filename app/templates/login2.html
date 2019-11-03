@@ -1,6 +1,8 @@
 {% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
 
-{% block content %}
+
+<!-- {% block content %}
     <h1 class="down123">Sign In</h1>
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
@@ -13,6 +15,15 @@
             {{ form.password(size=32) }}
         </p>
         <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-        <p>{{ form.submit() }}</p>
+        <input class="btn btn-default" type="submit" value="Submit">{{ form.submit() }}</p>
     </form>
+{% endblock %} -->
+
+{% block app_content %}
+    <h1>Register</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+    </div>
 {% endblock %}
