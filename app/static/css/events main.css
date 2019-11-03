@@ -16,7 +16,7 @@
       box-shadow: 10px 10px 5px 0px grey;
       width: 90%;
       height: auto;
-      background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrfMbiu2x2wWiUzqWZrRw08LgcD5IfE7gp3ur1EYsAPR_92h0RNw&s);
+      background: linear-gradient(45deg, rgba(222,255,77,1) 0%, rgba(0,128,128,1) 100%);
       margin-top: 240px;
       margin-left: 30px;
       margin-bottom: 25px;
