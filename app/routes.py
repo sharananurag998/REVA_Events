@@ -85,9 +85,14 @@ def add():
 def profile():
     return render_template('profile.html')
 
+
+@app.route('/Calendar')
+def profile():
+    return render_template('calendar.html')
+
 @app.route('/MyEvents')
 def MyEve():
-    myEventObj[
+    myEventObj = [
         {
             name:'HackFest 2019',
             body:'A 24 Hour Hackathon conducted by REVA University',
