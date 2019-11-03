@@ -100,11 +100,11 @@
         <div>REVA Events: <a href="/registrations">Registrations</a></div>
         <div>REVA Events: <a href="/login">Login</a></div> -->
         
-        <nav class="navbar  navbar-light bg-light navbar-fixed-top x1">
+        <nav class="navbar  navbar-light bg-white navbar-fixed-top x1">
             <span onclick="openNav()"><span class="glyphicon glyphicon-menu-hamburger abcd123" aria-hidden="true"></span>
-            </span>
-            
-            <a class="navbar-brand xyz12" href="/index">REVA Events</a><br>
+          </span>           
+            <a class="navbar-brand " href="/index" style="padding-top: 0; padding-left:8%; margin-left:2%"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="REVA Events" srcset=""></a><br>
+ 
             <!-- <img class="reval"src="static\images\TransparentRevaLogo.png" height="30px" width="30px"> -->
             <!--<span ">-->{% if current_user.is_admin %}<span onclick="openWindowQR()" class="glyphicon glyphicon-qrcode abcd123" aria-hidden="true"></span>{% elif current_user.is_anonymous %}<span onclick="openWindowLog()" class="glyphicon glyphicon-user abcd1234" aria-hidden="true"></span>{% else %}<span onclick="openWindowProf()" class="glyphicon glyphicon-user abcd1234" aria-hidden="true"></span> {% endif %}
             </span>
