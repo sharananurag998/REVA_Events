@@ -110,3 +110,7 @@ def MyEve():
         return redirect('/Event')
 
     return render_template('add_event.html', form=form2)
+
+# @app.route('/MainEvent')
+# def mainevent():
+#     return render_template('events main.html')
