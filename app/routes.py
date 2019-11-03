@@ -98,3 +98,11 @@ def reset():
 def add():
     form2 = AddEventForm()
     return render_template('add_event.html', form=form2)
+
+@app.route('/MyProfile')
+def profile():
+    return render_template('profile.html')
+
+@app.route('/MyEvents')
+def MyEve():
+    return render_template('MyEvents.html')

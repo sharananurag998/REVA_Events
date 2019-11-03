@@ -36,9 +36,19 @@ function closeNav() {
 
 /*For the Profile Icon*/
 
-function openWindow() 
+function openWindowQR() 
 {
-  window.open("https://static.superbot.works/widget.html?a=d6lxGMgGeE&l=en");
+  window.open("/qrread","_self");
+}
+
+function openWindowProf() 
+{
+  window.open("/MyProfile","_self");
+}
+
+function openWindowLog() 
+{
+  window.open("/login","_self");
 }
 
   // Get the modal

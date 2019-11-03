@@ -19,12 +19,14 @@
       <link rel="stylesheet" href="{{ url_for('static', filename='css/certi.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='css/event details.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
 
 
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <script src="{{ url_for('static', filename='js/abc.js') }}"></script> 
       <script src="{{ url_for('static', filename='js/hamburger.js') }}"></script> 
       <script src="{{ url_for('static', filename='js/qrcode.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
       <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -103,13 +105,13 @@
             
             <a class="navbar-brand xyz12" href="/index">REVA Events</a><br>
             <!-- <img class="reval"src="static\images\TransparentRevaLogo.png" height="30px" width="30px"> -->
-            <span onclick="openWindow()">{% if current_user.is_anonymous %}<span class="glyphicon glyphicon-user abcd1234" aria-hidden="true"></span>{% else %}<span class="glyphicon glyphicon-qrcode abcd123" aria-hidden="true"></span>{% endif %}
+            <!--<span ">-->{% if current_user.is_admin %}<span onclick="openWindowQR()" class="glyphicon glyphicon-qrcode abcd123" aria-hidden="true"></span>{% elif current_user.is_anonymous %}<span onclick="openWindowLog()" class="glyphicon glyphicon-user abcd1234" aria-hidden="true"></span>{% else %}<span onclick="openWindowProf()" class="glyphicon glyphicon-user abcd1234" aria-hidden="true"></span> {% endif %}
             </span>
             
             <span id="mySidenav" class="sidenav">
 
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                {% if current_user.is_anonymous %}
+                <!-- {% if current_user.is_anonymous %}
                 <h3>REVA Events</h3>
                 {% else %}
                 <h3>Hey! {{current_user.username}}</h3>
@@ -122,8 +124,28 @@
                 <a href="{{ url_for('login') }}">Login</a>
                 {% else %}
                 <a href="{{ url_for('logout') }}">Logout</a>
+                {% endif %} -->
+                
+                {% if current_user.is_anonymous %}
+                <h3>REVA Events</h3>
+                <a href="/index">Home</a>
+                <a href="/Event">Event Calendar</a>
+                <a href="/login">Login</a>
+                {% elif current_user.is_admin %}
+                <h3>  Hello,  {{current_user.username}}</h3>
+                <a href="/index">Home</a>
+                <a href="/Event">Event Calendar</a>
+                <a href="#">Admin Tools</a>
+                <a href="/add-event">Add Event</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+                {% else %}
+                <h3>  Yo,  {{current_user.username}}</h3>
+                <a href="/index">Home</a>
+                <a href="/Event">Event Calendar</a>
+                <a href="/MyEvents">My Events</a>
+                <a href="/certificates">My Certificates</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
                 {% endif %}
-        
             </span>
         </nav>
               
