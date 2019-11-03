@@ -3,6 +3,7 @@ from app.forms import LoginForm
 from flask import render_template, flash, redirect
 from flask_login import current_user, login_user
 from app.models import User
+from flask import request
 
 
 @app.route('/')
@@ -52,5 +53,6 @@ def qr():
 
 @app.route('/evn_det')
 def ev():
-	return render_template('event details.html')
+    evn_name = request.args.get('name')
+    return render_template('event details.html',event_name = evn_name)
 
