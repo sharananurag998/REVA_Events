@@ -22,7 +22,7 @@ def calander():
     events = [
         {
             'event': 'Hackathon 2019',
-            'venue': 'REVA Rangasthala'
+            'venue': 'REVA Rangasthala',
         },
         {
             'event': 'Under 25',
@@ -47,4 +47,8 @@ def certificates():
 @app.route('/qrread')
 def qr():
 	return render_template('qrreader.html')
+
+@app.route('/evn_det')
+def ev():
+	return render_template('event details.html')
 
