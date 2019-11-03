@@ -18,7 +18,8 @@ def index():
 @app.route('/registrations')
 @login_required
 def registrations():
-	return render_template('registration.html')
+    user_name = request.args.get('name')
+    return render_template('registration.html',user=user_name)
 
 # @app.route('/login')
 # def login():
@@ -84,3 +85,7 @@ def ev():
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+@app.route('/payment-gateway')
+def gateway():
+    return render_template('gateway.html')

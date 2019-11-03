@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="aba">
+    <h1>EDIT DETAILS</h1>
+</div>
+    <form class="abc">
+        <div class="form-group">
+          <label for="formGroupExampleInput">First name</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="First Name">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Last Name</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Last Name">
+          <label for="formGroupExampleInput">Email</label>
+          <input type="email" class="form-control" id="formGroupExampleInput" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Phone Number</label>
+          <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Phone Number">
+        </div>
+    <div class="btn" ><button type="button" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+{% endblock %}
