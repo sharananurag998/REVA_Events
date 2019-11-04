@@ -56,6 +56,11 @@ def certificates():
 def qr():
 	return render_template('qrreader.html')
 
+@app.route('/branch')
+@login_required
+def brn():
+	return render_template('branch_event.html')
+
 @app.route('/qrgen')
 @login_required
 def qrg():

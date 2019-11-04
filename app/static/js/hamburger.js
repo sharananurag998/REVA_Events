@@ -68,7 +68,12 @@ function openWin3()
 
 function openWin4() 
 {
-  window.open("https://www.google.com","_self");
+  window.open("https://www.coursera.org/account/accomplishments/certificate/88QVGK3ZMK5K","_self");
+}
+
+function openBranch() 
+{
+  window.open("/branch","_self");
 }
 
 
