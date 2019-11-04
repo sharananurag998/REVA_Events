@@ -9,7 +9,7 @@ class LoginForm(FlaskForm):
     submit = SubmitField()
 
 class AddEventForm(FlaskForm):
-    event_name = StringField('Event Name', validators=[DataRequired()])
+    name = StringField('Event Name', validators=[DataRequired()])
     body = StringField('About', validators=[DataRequired()])
     venue = StringField('Venue', validators=[DataRequired()])
     branch = StringField('Branch', validators=[DataRequired()])
