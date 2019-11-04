@@ -131,24 +131,24 @@
                 {% endif %} -->
                 
                 {% if current_user.is_anonymous %}
-                <h3 class="hamb" style="color: cornsilk; margin-left: 12%;">REVA Events</h3>
-                <a href="/index">Home</a>
-                <a href="/Event">Event Calendar</a>
-                <a href="/login">Login</a>
+                <h3 class="hamb new_font" style="color: cornsilk; margin-left: 12%;">REVA Events</h3>
+                <a href="/index" class="new_font">Home</a>
+                <a href="/Event" class="new_font">Event Calendar</a>
+                <a href="/login" class="new_font">Login</a>
                 {% elif current_user.is_admin %}
-                <h3 class="hamb" style="color: cornsilk; margin-left: 12%;">  Hello,  {{current_user.username}}</h3>
-                <a href="/index">Home</a>
-                <a href="/Event">Event Calendar</a>
-                <a href="#">Admin Tools</a>
-                <a href="/add-event">Add Event</a>
-                <a href="{{ url_for('logout') }}">Logout</a>
+                <h3 class="hamb new_font" style="color: cornsilk; margin-left: 12%;">  Hello,  {{current_user.username}}</h3>
+                <a href="/index" class="new_font">Home</a>
+                <a href="/Event" class="new_font">Event Calendar</a>
+                <a href="#" class="new_font">Admin Tools</a>
+                <a href="/add-event" class="new_font">Add Event</a>
+                <a href="{{ url_for('logout') }}" class="new_font">Logout</a>
                 {% else %}
-                <h3 class="hamb" style="color: cornsilk; margin-left: 12%;">  Yo,  {{current_user.username}}</h3>
-                <a href="/index">Home</a>
-                <a href="/Event">Event Calendar</a>
-                <a href="/MyEvents">My Events</a>
-                <a href="/certificates">My Certificates</a>
-                <a href="{{ url_for('logout') }}">Logout</a>
+                <h3 class="hamb new_font" style="color: cornsilk; margin-left: 12%;">  Yo,  {{current_user.username}}</h3>
+                <a href="/index" class="new_font">Home</a>
+                <a href="/Event" class="new_font">Event Calendar</a>
+                <a href="/MyEvents" class="new_font">My Events</a>
+                <a href="/certificates" class="new_font">My Certificates</a>
+                <a href="{{ url_for('logout') }}" class="new_font">Logout</a>
                 {% endif %}
             </span>
         </nav>
