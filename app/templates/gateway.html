@@ -1,46 +1,32 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div id="paypal-button" class="paypal12"></div>
-<script src="https://www.paypalobjects.com/api/checkout.js"></script>
-<script>
-  paypal.Button.render({
-    // Configure environment
-    env: 'sandbox',
-    client: {
-      sandbox: 'demo_sandbox_client_id',
-      production: 'demo_production_client_id'
-    },
-    // Customize button (optional)
-    locale: 'en_US',
-    style: {
-      size: 'small',
-      color: 'gold',
-      shape: 'pill',
-    },
+<form onsubmit="generate();return false;">
+  <div class="bgh3">
+<button type="button" class="btn btn-primary" onclick="generate();return false;">Generate QR</button>
+  </div>
+</form>
 
-    // Enable Pay Now checkout flow (optional)
-    commit: true,
+<div id="qrResult" class="fgt12" style="height: 100px;width: 100px">
 
-    // Set up a payment
-    payment: function(data, actions) {
-      return actions.payment.create({
-        transactions: [{
-          amount: {
-            total: '0.01',
-            currency: 'USD'
-          }
-        }]
-      });
-    },
-    // Execute the payment
-    onAuthorize: function(data, actions) {
-      return actions.payment.execute().then(function() {
-        // Show a confirmation message to the buyer
-        window.alert('Thank you for your purchase!');
-      });
-    }
-  }, '#paypal-button');
+</div>
+
+<script type="text/javascript">
+var qrcode=new QRCode(document.getElementById('qrResult'),{
+  width:100,
+  height:100
+});
+
+function generate(){
+var message={{current_user.id}};
+if(!message.value){
+  alert("Input a text");
+  message.focus();
+  return;
+}
+
+qrcode.makeCode(message.value);
+}
 
 </script>
 

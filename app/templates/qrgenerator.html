@@ -4,8 +4,8 @@
 
 <form onsubmit="generate();return false;">
     <div class="bgh3">
-    <input style="border-radius: 10px;" type="text" id="qr" name=""> 
-    <button type="button" class="btn btn-primary" onclick="generate();return false;">Generate QR</button>
+    <!-- <input style="border-radius: 10px;" type="text" id="qr" name=""> 
+    <button type="button" class="btn btn-primary" onclick="generate();return false;">Generate QR</button> -->
     </div>
 </form>
 
@@ -20,12 +20,7 @@
 	});
 
 function generate(){
-	var message=document.getElementById('qr');
-	if(!message.value){
-		alert("Input a text");
-		message.focus();
-		return;
-	}
+	var message="{{current_user.username}}";
 
 	qrcode.makeCode(message.value);
 }
