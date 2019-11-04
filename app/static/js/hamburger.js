@@ -51,6 +51,27 @@ function openWindowLog()
   window.open("/login","_self");
 }
 
+function openWin1() 
+{
+  window.open("https://onedrive.live.com/?authkey=%21AH0mw8qHPuXrqZg&cid=AC759418B23FAA47&id=AC759418B23FAA47%21981&parId=AC759418B23FAA47%21979&o=OneUp/","_self");
+}
+
+function openWin2() 
+{
+  window.open("https://onedrive.live.com/?authkey=%21AOBQ4z%5FYpQWOGaU&cid=AC759418B23FAA47&id=AC759418B23FAA47%21982&parId=AC759418B23FAA47%21979&o=OneUp","_self");
+}
+
+function openWin3() 
+{
+  window.open("https://graduation.udacity.com/confirm/TLA96MF6/","_self");
+}
+
+function openWin4() 
+{
+  window.open("https://www.google.com","_self");
+}
+
+
   // Get the modal
   var modal = document.getElementById("myModal");
 
