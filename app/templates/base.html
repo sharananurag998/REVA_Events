@@ -139,8 +139,9 @@
                 <h3 class="hamb new_font" style="color: cornsilk; margin-left: 12%;">  Hello,  {{current_user.username}}</h3>
                 <a href="/index" class="new_font">Home</a>
                 <a href="/Event" class="new_font">Event Calendar</a>
-                <a href="#" class="new_font">Admin Tools</a>
+                <!-- <a href="#" class="new_font">Admin Tools</a> -->
                 <a href="/add-event" class="new_font">Add Event</a>
+                <a href="/qrread" class="new_font">Scan QR</a>
                 <a href="{{ url_for('logout') }}" class="new_font">Logout</a>
                 {% else %}
                 <h3 class="hamb new_font" style="color: cornsilk; margin-left: 12%;">  Yo,  {{current_user.username}}</h3>
