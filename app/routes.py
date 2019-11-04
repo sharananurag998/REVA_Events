@@ -59,7 +59,9 @@ def qr():
 @app.route('/branch')
 @login_required
 def brn():
-	return render_template('branch_event.html')
+    branch = request.args.get('br')
+    events = Event.query.filter_by(branch=branch).all()
+    return render_template('branch_event.html', branch=branch, events=events)
 
 @app.route('/qrgen')
 @login_required
