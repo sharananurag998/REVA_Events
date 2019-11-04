@@ -96,7 +96,7 @@ def add():
         event = Event(name=form.name.data, body=form.body.data, venue=form.venue.data, branch=form.branch.data, image=form.image.data, timestamp = form.timestamp.data)
         db.session.add(event)
         db.session.commit()
-        return redirect('/evn_det')
+        return redirect(url_for('index'))
     return render_template('add_event.html',  form=form)
 
 
