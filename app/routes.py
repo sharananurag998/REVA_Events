@@ -13,9 +13,11 @@ from werkzeug.urls import url_parse
 @app.route('/')
 @app.route('/index')
 def index():
+    branch = 'CSE'
+    cse_events = Event.query.filter_by(branch=branch).all()
     events = Event.query.all()
     first_event = Event.query.filter_by(id=1)
-    return render_template('index.html', title='Home',events=events, first=first_event)
+    return render_template('index.html', title='Home',events=events,cse_events=cse_events, first=first_event)
 
 @app.route('/registrations')
 @login_required

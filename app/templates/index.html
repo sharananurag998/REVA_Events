@@ -46,4 +46,23 @@
   <div class="card card1 fe1" style="background: url({{ url_for('static', filename='images/civil.jpg') }});border-radius:15px ; margin-top: 7px; margin-left:6px; margin-right:6px;height: 6%; width: 55% ; font-size: 15px;"><a href="/branch?br=Civil"><h2 class="cat new_font">Civil</h2></a></div>
   </div> 
 
+  
+  <div class="container" style="margin-top: -10%">
+      <h3 class="new_font">C & IT Events</h3>
+      <div class="row new_font">
+         {% for evn in cse_events %}
+         <div class="card" style="width: auto;">
+             <img src="{{evn.image}}" class="card-img-top" alt="">
+             <div class="card-body" >
+               <h5 class="card-title">{{evn.name}}</h5>
+               <p class="card-text">{{evn.body}}</p>
+               <a href="/evn_det?id={{ evn.id }}" class="btn btn-primary">More Details</a>
+             </div>
+         </div>
+         <br>
+         {% endfor %}
+     </div>		
+  </div>
+  
+
 {% endblock %} 
