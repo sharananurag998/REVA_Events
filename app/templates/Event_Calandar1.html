@@ -7,7 +7,7 @@
         {% for evn in events %}
         <ul>
           <li><b><h5 class="new_font">{{evn.timestamp}}</h5></b></li>
-          <li><h3><a class="new_font" href="/evn_det?name={{evn.name}}&venue={{evn.venue}}&body={{evn.body}}&timestamp={{evn.timestamp}}">{{evn.name}}</a></h3>
+          <li><h3><a class="new_font" href="/evn_det?id={{evn.id}}">{{evn.name}}</a></h3>
             <br>
             <span class="new_font">{{evn.venue}}</span></a> </li>
         </ul>

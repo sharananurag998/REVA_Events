@@ -63,11 +63,9 @@ def qrg():
 
 @app.route('/evn_det')
 def ev():
-    evn_name = request.args.get('name')
-    evn_venue = request.args.get('venue')
-    evn_body = request.args.get('body')
-    evn_date = request.args.get('timestamp')
-    return render_template('event details.html',event_name = evn_name,venue_name = evn_venue,body_event= evn_body,date_evn=evn_date)
+    evn_id = request.args.get('id')
+    event = Event.query.get(evn_id)
+    return render_template('event details.html',event=event)
 
 @app.route('/logout')
 def logout():
