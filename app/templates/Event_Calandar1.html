@@ -3,13 +3,13 @@
 {% block content %}
     <div class="container-fluid">
     <div>
-        <h2 style="margin-top: 30%;">Event Calendar </h2><br>
+        <h2 class="new_font" style="margin-top: 30%;">Event Calendar </h2><br>
         {% for evn in events %}
         <ul>
-          <li><b><h5>{{evn.timestamp}}</h5></b></li>
-          <li><h3><a href="/evn_det?name={{evn.name}}&venue={{evn.venue}}&body={{evn.body}}&timestamp={{evn.timestamp}}">{{evn.name}}</a></h3>
+          <li><b><h5 class="new_font">{{evn.timestamp}}</h5></b></li>
+          <li><h3><a class="new_font" href="/evn_det?name={{evn.name}}&venue={{evn.venue}}&body={{evn.body}}&timestamp={{evn.timestamp}}">{{evn.name}}</a></h3>
             <br>
-            {{evn.venue}}</a> </li>
+            <span class="new_font">{{evn.venue}}</span></a> </li>
         </ul>
 
         <br>
