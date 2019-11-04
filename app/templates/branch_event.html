@@ -40,10 +40,10 @@
   <h3 class="new_font" style ="margin-left: 5%; margin-top:1%;">Event Categories</h3>
   <div class="scrolling-wrapper-flexbox zxc1">
       
-      <div class="card card1 fe1" style="background: url({{ url_for('static', filename='images/cit.jpg') }}); border-radius:15px ; margin-top: 7px; margin-left:6px; margin-right:6px;height: 6%; width: 55% ; font-size: 15px;"><a href="/branch?br=cse"><h2 class="cat">C & IT</h2></a></div>
-  <div class="card card1 fe1" style="background: url({{ url_for('static', filename='images/mech.jpg') }}) ;border-radius:15px ; margin-top: 7px; margin-left:6px; margin-right:6px;height: 6%; width: 55% ; font-size: 15px;"><a href="/branch?br=mechanical"><h2 class="cat new_font">Mechanical</h2></a></div>
-  <div class="card card1 fe1" style="background: url(https://www.maxplayingcards.com/en/wp-content/uploads/2018/03/Hybrid_aces.png);border-radius:15px ; margin-top: 7px; margin-left:6px; margin-right:6px;height: 6%; width: 55% ; font-size: 15px;"><a href="/branch?br=electrical"><h2 class="cat new_font">Electrical</h2></a></div>
-  <div class="card card1 fe1" style="background: url({{ url_for('static', filename='images/civil.jpg') }});border-radius:15px ; margin-top: 7px; margin-left:6px; margin-right:6px;height: 6%; width: 55% ; font-size: 15px;"><a href="/branch?br=mechanical"><h2 class="cat new_font">Civil</h2></a></div>
+      <div class="card card1 fe1" style="background: url({{ url_for('static', filename='images/cit.jpg') }}); border-radius:15px ; margin-top: 7px; margin-left:6px; margin-right:6px;height: 6%; width: 55% ; font-size: 15px;"><a href="/branch?br=CSE"><h2 class="cat">C & IT</h2></a></div>
+  <div class="card card1 fe1" style="background: url({{ url_for('static', filename='images/mech.jpg') }}) ;border-radius:15px ; margin-top: 7px; margin-left:6px; margin-right:6px;height: 6%; width: 55% ; font-size: 15px;"><a href="/branch?br=Mechanical"><h2 class="cat new_font">Mechanical</h2></a></div>
+  <div class="card card1 fe1" style="background: url({{ url_for('static', filename='images/electrical.png') }});border-radius:15px ; margin-top: 7px; margin-left:6px; margin-right:6px;height: 6%; width: 55% ; font-size: 15px;"><a href="/branch?br=Electrical"><h2 class="cat new_font">Electrical</h2></a></div>
+  <div class="card card1 fe1" style="background: url({{ url_for('static', filename='images/civil.jpg') }});border-radius:15px ; margin-top: 7px; margin-left:6px; margin-right:6px;height: 6%; width: 55% ; font-size: 15px;"><a href="/branch?br=Civil"><h2 class="cat new_font">Civil</h2></a></div>
   </div> 
 
   <div class="container" style="margin-top: -10%">
@@ -54,7 +54,7 @@
            <div class="card-body" >
              <h5 class="card-title">{{evn.name}}</h5>
              <p class="card-text">{{evn.body}}</p>
-             <a href="/evn_det?name={{evn.name}}&venue={{evn.venue}}&body={{evn.body}}&timestamp={{evn.timestamp}}" class="btn btn-primary">More Details</a>
+             <a href="/evn_det?id={{ evn.id }}" class="btn btn-primary">More Details</a>
            </div>
        </div>
        <br>
