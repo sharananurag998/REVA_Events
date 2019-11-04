@@ -2,13 +2,16 @@
 
 {% block content %}
 <form onsubmit="generate();return false;">
-  <div class="bgh3">
-<button type="button" class="btn btn-primary" onclick="generate();return false;">Generate QR</button>
+  <div class="bgh3 invisible">
+<input style="border-radius: 10px;" type="text" id="qr" name="" value="{{current_user.username}}"> 
+  <button type="button" class="btn btn-primary " onclick="generate();return false;">Generate QR</button> 
   </div>
 </form>
 
 <div id="qrResult" class="fgt12" style="height: 100px;width: 100px">
-
+<snap class="new_font" style="font-size: 20px;"><b><u>Your Ticket</u></b><snap>
+<br>
+<br>
 </div>
 
 <script type="text/javascript">
@@ -17,17 +20,20 @@ var qrcode=new QRCode(document.getElementById('qrResult'),{
   height:100
 });
 
-function generate(){
-var message={{current_user.id}};
-if(!message.value){
-  alert("Input a text");
-  message.focus();
-  return;
-}
-
+$(document).ready(function generate(){
+var message=document.getElementById('qr');
 qrcode.makeCode(message.value);
-}
+}); 
+
 
 </script>
+
+<div class="new_font" style="margin-left: 20%; margin-top: 30%; font-size:150%">
+Event Name - {{event.name}}
+<br><br>
+Venue - {{event.venue}}
+<br><br>
+Date - {{event.timestamp}}
+</div>
 
 {% endblock %}

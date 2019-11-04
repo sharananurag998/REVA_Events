@@ -19,7 +19,7 @@ box-shadow: 0 0 0 0;">
         <div class="card-body new_font">
           <h3 class="card-title"><u><strong>{{event.name}}</strong></u></h3><br>
            <p class="card-text"> {{event.body}}<!--It’s a huge youth festival in India aimed at sharing ideas and inspiring each other to make a difference in the world. Basically people attend to see what others are up to and show off what they’re doing, whether they’re working with technology, cooking, designing, travelling, creating art, etc. Networking is also a big part of the event.-->  </p> 
-          <a href="/payment-gateway" class="btn btn-primary btn-lg btn-block adfg12">Register</a>
+          <a href="/payment-gateway?id={{event.id}}" class="btn btn-primary btn-lg btn-block adfg12">Register</a>
           <!-- ?name={{current_user.username}} -->
           <button type="button" class="btn btn-warning btn-lg btn-block interest1">Interested</button>
         </div>

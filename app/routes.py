@@ -81,7 +81,9 @@ def logout():
 
 @app.route('/payment-gateway')
 def gateway():
-    return render_template('gateway.html')
+    evn_id = request.args.get('id')
+    event = Event.query.get(evn_id)
+    return render_template('gateway.html',event=event)
 
 @app.route('/reset')
 def reset():
