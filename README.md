@@ -19,3 +19,4 @@ REVA Events is an event management application for REVA University.
 2. Anurag Sharan: @sharananurag998
 3. Adarsh Nair: @adarshxinferno
 4. Ankit Jaiswal: @ankitkumarjaiswal
+5. Aman Srivastava: @amansrivastava1110
