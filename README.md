@@ -13,6 +13,31 @@ REVA Events is an event management application for REVA University.
 5. Flask-bootstrap
 6. Flask-login
 7. python-dotenv
+8. flask_sqlalchemy
+
+## How to run locally
+
+1. Create a virtual environment named either venv or reva_events_venv. 
+2. Activate the virtualenv
+3. Install the following packages: -
+
+``` 
+pip install flask 
+pip install python-dotenv
+pip install flask_sqlalchemy
+pip install flask_migrate
+pip install flask_login
+pip install flask_bootstrap
+pip install flask_wtf
+```
+
+4. Start the app: -
+```
+flask run
+```
+5. The app will be hosted locally on http://127.0.0.1:5000
+
+6. Set the device size as smartphone (300x660) in developer options to view the website.  
 
 ## Authors
 
