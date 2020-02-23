@@ -12,6 +12,7 @@ REVA Events is an event management application for REVA University.
 4. Flask-wtfForms
 5. Flask-bootstrap
 6. Flask-login
+7. python-dotenv
 
 ## Authors
 
