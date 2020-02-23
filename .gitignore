@@ -2,3 +2,5 @@ venv/
 .DS_Store
 *.pyc
 *.pyc
+
+reva_events_venv/
