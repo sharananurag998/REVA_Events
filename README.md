@@ -43,16 +43,6 @@ flask run
 
 You can access a working demo of the website at: http://sharananurag998.pythonanywhere.com/
 
-## Demo Credentials: -
-
-Faculty Login: -
-username: faculty1
-password: reva
-
-Student Login: -
-username:
-password: 
-
 ## Authors
 
 1. Aniketh Hotagi: @Aniketh896
