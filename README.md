@@ -39,6 +39,16 @@ flask run
 
 6. Set the device size as smartphone (300x660) in developer options to view the website.  
 
+## Demo Credentials: -
+
+Faculty Login: -
+username: faculty1
+password: reva
+
+Student Login: -
+username:
+password: 
+
 ## Authors
 
 1. Aniketh Hotagi: @Aniketh896
