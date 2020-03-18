@@ -41,7 +41,8 @@ flask run
 
 ## Demo
 
-You can access a working demo of the website at: http://sharananurag998.pythonanywhere.com/
+You can access a working demo of the website at: http://sharananurag998.pythonanywhere.com/. 
+Make sure to view it on a mobile or tablet only because it is not properly scaled/Accessable for PC.
 
 ## Authors
 
