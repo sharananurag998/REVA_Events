@@ -1,4 +1,6 @@
 # REVA_Events
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsharananurag998%2FREVA_Events.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsharananurag998%2FREVA_Events?ref=badge_shield)
+
 
 ## Introduction
 
@@ -51,3 +53,7 @@ Make sure to view it on a mobile or tablet only because it is not properly scale
 3. Adarsh Nair: @adarshxinferno
 4. Ankit Jaiswal: @ankitkumarjaiswal
 5. Aman Srivastava: @amansrivastava1110
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsharananurag998%2FREVA_Events.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsharananurag998%2FREVA_Events?ref=badge_large)
